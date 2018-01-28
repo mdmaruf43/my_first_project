@@ -1,41 +1,140 @@
 <!DOCTYPE html>
 <html>
-<head lang="en-US">
-	<title>Project 1</title>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		h1{
-			text-align: center;
-		}
-		body{
-			color: white;
-			font-family: Open Sans;
-			background: url("background3.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		p{
-			text-align: center;
-			font-size: 22px;
-		}
-		input{
-			border: 1 solid white;
-			font-size: 16px;
+	<head lang="en-US">
+		<title>Project 1</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			*{
+				box-sizing: border-box; 
+			}
 
-		}
-		input[type="submit"]{
-			background: green;
-			color: white;
-		}
-	</style>
-</head>
-<body>
-	<h1>Maruf Ahmed</h1>
-	<p>Hi! I'm a Maruf Ahmed.</p>
+			div.social{
+				float: left;
+				text-align: center;
+				width: 20%;
+			}
+			li.a{
+				list-style-type: none;
+				background-color: #e5e5e5;
+				padding: 8px;
+				margin-top: 7px;
+			}
+			nav.nav{
+				padding: 5px;
+				background-color: #e5e5e5;
+				color: white;
+			}
+			nav.nav ul li{
+				display: inline;
+				margin: 5px;
 
-	<center>
-		<input type="email" name="" placeholder="Eamil Address">
-	<input type="submit" name="" value="Submit">
-	</center>
-</body>
+			}
+			div.main{
+				overflow: auto;
+			}
+			div.about{
+				float: left;
+				padding: 0 20px;
+				font-family: Arial;
+				font-size: 18px;
+				width: 60%;
+			}
+			div.visitor{
+				float: right;
+				text-align: center;
+				width: 20%;
+				background-color: #e5e5e5
+			}
+			div.hello{
+				text-align: center;
+				padding: 15px;
+				background-color: green;
+				color: white;
+			}
+			
+			div.footer{
+				text-align: center;
+				background-color: #e5e5e5;
+				padding: 5px;
+				margin-top: 8px;
+			}
+			div.address{
+				text-align: right;
+			}
+			a:link{
+				color: green;
+				text-decoration: none;
+			}
+			a:hover{
+				color: red;
+			}
+
+		</style>
+		<script>
+	function myFunction(){
+	var x = document.getElementsByClassName("hide");
+		for (var i = 0; i < x.length; i++){
+		x[i].style.display = "none";
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div class="hello">
+			<h1>Hello Awesome People</h1>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Contract</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+		<div class="main">
+			<div class="social">
+				<h3>My social profile</h3>
+				<ul>
+					<li class="a"><a href="https://github.com/mdmaruf43" target="_blank">Github</a></li>
+					<li class="a"><a href="https://www.facebook.com/mdmaruf43" target="_blank">Facebook</a></li>
+					<li class="a"><a href="https://twitter.com/mdmaruf43" target="_blank">Twitter</a></li>
+					<li class="a"><a href="https://www.instagram.com/mdmaruf43" target="_blank">Intagrame</a></li>
+				</ul>
+			</div>
+			<div class="about">
+				<p><strong>Click the button, and a show the magic</strong></p>
+				<button onclick="myFunction()">Click me!</button>
+				<h3 class="hide">About me!</h3>
+				<p class="hide">I am Maruf Ahmed. I am student of Daffodil International University. I love to read, write, and help people also. In future, I wanted to be a web devloper.</p>
+				<img class="hide" src="../image/maruf-profile.jpg" alt="Maruf-Profile" style="width: 300px;float: left; height: 200px;">
+			</div>
+			<div class="visitor">
+				<h3>Visitor Details</h3>
+				<form>
+					First Name:<br>
+					<input type="text" name="firstname"><br>
+					Last Name:<br>
+					<input type="text" name="lastname"><br>
+					Email:<br>
+					<input type="email" name="email" placeholder="Enter Email"><br>
+					Contact No:<br>
+					<input type="text" name="Contact" placeholder="add +88"> <br>
+					<input type="submit" name="sub" value="Submit">
+				</form>
+				
+			</div>
+		</div>
+		<div class="address">
+			<address>
+				Web page created by Maruf Ahmed.<br>
+				Managing Editor at:<a href="https://www.projuktiravijatri.com/" target="_blank">Projuktir Avijatri</a><br>
+				Dhaka, Bangladesh
+			</address>
+		</div>
+		<div class="footer">
+			<footer>
+				<p>&copy;Thank for visiting</p>
+			</footer>
+		</div>
+	</body>
 </html>
